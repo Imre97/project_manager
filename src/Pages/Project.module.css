@@ -1,0 +1,17 @@
+.project-container {
+    margin: 2rem auto 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    width: 400px;
+    border: 1px solid black;
+    gap: 1rem;
+    padding-left: 1rem;
+}
+
+.description {
+    inline-size: 350px;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+}

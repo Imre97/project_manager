@@ -1,24 +1,20 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { useState } from 'react'
+import { Routes, Route } from "react-router";
+import Home from "./Pages/Home";
+import CreateProject from "./Pages/CreateProject";
+import { FormData } from './modal/modal'
+import Project from './Pages/Project';
+
 
 function App() {
+  const [formDatas, setFormDatas] = useState<FormData[]>([])
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Routes>
+        <Route path="/" element={<Home formDatas={formDatas} />} />
+        <Route path="new-task" element={<CreateProject formDatas={formDatas} setFormDatas={setFormDatas} />} />
+        <Route path="project/:id" element={<Project formDatas={formDatas}/>} />
+      </Routes>
     </div>
   );
 }

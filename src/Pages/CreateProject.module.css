@@ -1,0 +1,51 @@
+.form-cantainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-title {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.progressbar-box {
+    width: 500px;
+    height: 10px;
+    border: 1px solid black;
+    margin-bottom: 2rem;
+}
+
+.progressbar {
+    background-color: red;
+    height: 100%;
+}
+
+.form-content {
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.form-buttons {
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.form-buttons > button {
+    padding: .5rem 1rem;
+}
+
+.error {
+    color: red;
+    font-weight: bold;
+}

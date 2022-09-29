@@ -1,0 +1,20 @@
+.form-one__box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    width: 300px;
+}
+
+.form-one__box > input {
+    width: 80%;
+    height: 30px;
+    border-radius: 10px;
+    padding: .25rem;
+}
+
+.form-one__box > textarea {
+    width: 80%;
+    height: 100px;
+}
