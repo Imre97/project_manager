@@ -13,6 +13,7 @@ const FormOne: React.FC<Props> = ({ formData, setFormData }) => {
         <div className={classes['form-one__box']}>
             <input type="text" maxLength={255} placeholder='project name' value={formData.name} onChange={(e) => setFormData({...formData, name: e.target.value})}/>
             <textarea placeholder="project desciprtion" value={formData.description} onChange={(e) => setFormData({...formData, description: e.target.value})} />
+            <div>{formData.description.length} / 500</div>
         </div>
     )
 }

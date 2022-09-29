@@ -33,10 +33,7 @@ const CreateProject: React.FC<Props> = ({ setFormDatas, formDatas }) => {
         setError('')
     }, [pageIndex])
 
-    const checkUrl = (url: string) => {
-        const urlPattern = new RegExp('(?:https?):\/\/(\w+:?\w*)?(\S+)(:\d+)?(\/|\/([\w#!:.?+=&%!\-\/]))?');
-        return urlPattern.test(url)
-    }
+
 
     const handleSubmit = () => {
         if (formData.name === '' || formData.name.length > 255) {
@@ -49,21 +46,6 @@ const CreateProject: React.FC<Props> = ({ setFormDatas, formDatas }) => {
             return
         }
 
-        let urlValid: boolean = true
-        formData.url.forEach(x => {
-            if(x.url === "") {
-                return
-            }
-            if(!checkUrl(x.url)) {
-                urlValid = false
-                setError('Hibás url formátum')
-                return
-            }
-        })
-
-        if(!urlValid) {
-            return
-        }
 
         setFormDatas([...formDatas, formData])
         navigate('/')
